@@ -83,6 +83,11 @@ app.post('/reply/:postId/:commentIndex', async (req, res) => {
         await post.save();
     }
     res.redirect('/');
+
+    const path = require('path');
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 });
 
 
